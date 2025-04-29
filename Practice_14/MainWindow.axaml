@@ -1,0 +1,126 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="540"
+        x:Class="Practice_14.MainWindow"
+        Title="Practice_14"
+        Background="#181A20"
+        TransparencyLevelHint="AcrylicBlur"
+        WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="24" Background="#23272F" Padding="40" Margin="40" BoxShadow="0 8 48 #000C">
+        <StackPanel Spacing="24">
+            <TextBlock Text="🚌 Лабораторна 14: Автобуси"
+                       FontWeight="Bold"
+                       FontSize="40"
+                       Foreground="#F6F8FA"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,24"
+                       Effect="{DynamicResource DropShadowEffect}"/>
+            <Separator Margin="0,0,0,12" Background="#444C56" Height="2"/>
+            <StackPanel Orientation="Horizontal" Spacing="18" HorizontalAlignment="Center">
+                <Button x:Name="CreateBusBtn"
+                        Content="Створити Автобус"
+                        Width="200"
+                        Height="48"
+                        Background="#238636"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        CornerRadius="12"
+                        FontSize="18"
+                        Effect="{DynamicResource DropShadowEffect}"/>
+                <Button x:Name="CreateExpressBtn"
+                        Content="Створити Експрес"
+                        Width="200"
+                        Height="48"
+                        Background="#0969DA"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        CornerRadius="12"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Effect="{DynamicResource DropShadowEffect}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="18" HorizontalAlignment="Center">
+                <Button x:Name="CreateSuburbanBtn"
+                        Content="Створити Приміський"
+                        Width="240"
+                        Height="48"
+                        Background="#8250DF"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        CornerRadius="12"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Effect="{DynamicResource DropShadowEffect}"/>
+                <Button x:Name="CreateCityBtn"
+                        Content="Створити Міський"
+                        Width="200"
+                        Height="48"
+                        Background="#D29922"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        CornerRadius="12"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Effect="{DynamicResource DropShadowEffect}"/>
+            </StackPanel>
+            <Separator Margin="0,12,0,12" Background="#444C56" Height="2"/>
+            <StackPanel Orientation="Horizontal" Spacing="18" HorizontalAlignment="Center">
+                <Button x:Name="DepartBtn"
+                        Content="Відправити Автобус"
+                        Width="206"
+                        Height="48"
+                        Background="#E34C26"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        CornerRadius="12"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Effect="{DynamicResource DropShadowEffect}"/>
+                <Button x:Name="ServiceBtn"
+                        Content="Обслуговування"
+                        Width="200"
+                        Height="48"
+                        Background="#2188FF"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        CornerRadius="12"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Effect="{DynamicResource DropShadowEffect}"/>
+                <Button x:Name="DriveBtn"
+                        Content="Автобус їде"
+                        Width="200"
+                        Height="48"
+                        Background="#6F42C1"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        CornerRadius="12"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Effect="{DynamicResource DropShadowEffect}"/>
+            </StackPanel>
+            <Border Background="#161B22"
+                    CornerRadius="12"
+                    Padding="24"
+                    Margin="0,24,0,0"
+                    BoxShadow="0 4 24 #000A"
+                    BorderBrush="#444C56"
+                    BorderThickness="2">
+                <TextBlock x:Name="InfoText"
+                           Foreground="#F6F8FA"
+                           FontSize="22"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"/>
+            </Border>
+        </StackPanel>
+    </Border>
+    <Window.Resources>
+        <DropShadowEffect x:Key="DropShadowEffect"
+                          Color="#000000"
+                          BlurRadius="16"
+                          Opacity="0.4"/>
+    </Window.Resources>
+</Window>
