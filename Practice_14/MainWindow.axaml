@@ -41,6 +41,24 @@
                         IsEnabled="False"
                         Effect="{DynamicResource DropShadowEffect}"/>
             </StackPanel>
+            <StackPanel Orientation="Vertical" Spacing="12" HorizontalAlignment="Center">
+                <TextBlock Text="Номер маршруту/Назва:"
+                           Foreground="#F6F8FA"
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="BusNumberInput"
+                         Width="200"
+                         Height="32"
+                         Background="#2E343B"
+                         Foreground="#F6F8FA"
+                         BorderBrush="#444C56"
+                         CornerRadius="8"/>
+                <ListBox x:Name="BusList"
+                         Width="400"
+                         Height="100"
+                         Background="#2E343B"
+                         Foreground="#F6F8FA"
+                         BorderBrush="#444C56"/>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" Spacing="18" HorizontalAlignment="Center">
                 <Button x:Name="CreateSuburbanBtn"
                         Content="Створити Приміський"

@@ -1,6 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System;
+using System.Collections.ObjectModel;
 
 namespace Practice_14;
 
@@ -8,10 +9,12 @@ public partial class MainWindow : Window
 {
     private Bus? mainBus;
     private Bus? currentBus;
+    private ObservableCollection<string> busListItems = new ObservableCollection<string>();
 
     public MainWindow()
     {
         InitializeComponent();
+        BusList.ItemsSource = busListItems;
 
         CreateBusBtn.Click += CreateBusBtn_Click;
         CreateExpressBtn.Click += CreateExpressBtn_Click;
@@ -24,9 +27,11 @@ public partial class MainWindow : Window
 
     private void CreateBusBtn_Click(object? sender, RoutedEventArgs e)
     {
-        mainBus = new Bus("Автобус");
+        var busNum = BusNumberInput.Text;
+        mainBus = new Bus($"Автобус {busNum}");
         currentBus = mainBus;
         InfoText.Text = $"Створено: {mainBus.GetInfo()}";
+        busListItems.Add(mainBus.Name);
         currentBus.OnDeparted += Bus_OnDeparted;
         CreateExpressBtn.IsEnabled = true;
         CreateSuburbanBtn.IsEnabled = true;
@@ -38,23 +43,29 @@ public partial class MainWindow : Window
 
     private void CreateExpressBtn_Click(object? sender, RoutedEventArgs e)
     {
-        currentBus = new ExpressBus("Експрес");
+        var busNum = BusNumberInput.Text;
+        currentBus = new ExpressBus($"Експрес {busNum}");
         currentBus.OnDeparted += Bus_OnDeparted;
         InfoText.Text = $"Створено: {currentBus.GetInfo()}";
+        busListItems.Add(currentBus.Name);
     }
 
     private void CreateSuburbanBtn_Click(object? sender, RoutedEventArgs e)
     {
-        currentBus = new SuburbanBus("Приміський");
+        var busNum = BusNumberInput.Text;
+        currentBus = new SuburbanBus($"Приміський {busNum}");
         currentBus.OnDeparted += Bus_OnDeparted;
         InfoText.Text = $"Створено: {currentBus.GetInfo()}";
+        busListItems.Add(currentBus.Name);
     }
 
     private void CreateCityBtn_Click(object? sender, RoutedEventArgs e)
     {
-        currentBus = new CityBus("Міський");
+        var busNum = BusNumberInput.Text;
+        currentBus = new CityBus($"Міський {busNum}");
         currentBus.OnDeparted += Bus_OnDeparted;
         InfoText.Text = $"Створено: {currentBus.GetInfo()}";
+        busListItems.Add(currentBus.Name);
     }
 
     private void DepartBtn_Click(object? sender, RoutedEventArgs e)

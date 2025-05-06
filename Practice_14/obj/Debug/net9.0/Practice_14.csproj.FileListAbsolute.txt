@@ -64,3 +64,4 @@
 /home/kirito/RiderProjects/Practice_14/Practice_14/obj/Debug/net9.0/Practice.9DAF1243.Up2Date
 /home/kirito/RiderProjects/Practice_14/Practice_14/obj/Debug/net9.0/Practice_14.genruntimeconfig.cache
 /home/kirito/RiderProjects/Practice_14/Practice_14/obj/Debug/net9.0/ref/Practice_14.dll
+/home/kirito/RiderProjects/Practice_14/Practice_14/obj/Debug/net9.0/Practice_14.sourcelink.json
